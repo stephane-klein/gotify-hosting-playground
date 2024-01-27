@@ -68,3 +68,17 @@ $ curl -s -X "POST" \
   "priority": 10,
   "title": "Hello"
 }'
+```
+
+## Deploy on your server
+
+Copy [`deploy-to-server.sh.skel`](./deploy-to-server.sh.skel) to `deploy-to-server.sh`.  
+Edit `deploy-to-server.sh` and setup your parameter.
+
+```
+$ cat deploy-to-server.sh | ssh root@your 'bash -s'
+```
+
+Note: this deployment is based on https://github.com/nginx-proxy/nginx-proxy to configure virtualhost by Docker variable environment.
+
+Go to https://gotify.example.com
